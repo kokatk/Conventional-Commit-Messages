@@ -1,46 +1,44 @@
 # Guia Completo de Conventional Commits: Boas Práticas para Commits Impactantes 🚀
 
+## Types (Tipos) 📋
+
+Os tipos devem ser em inglês, seguindo as melhores práticas. Aqui está uma tabela com os principais, baseados na convenção Angular e extensões comuns:
+
+| Type      | Descrição | Impacto no SemVer |
+|-----------|-----------|-------------------|
+| **feat** | Adiciona ou remove uma nova feature. | MINOR |
+| **fix**  | Corrige um bug. | PATCH |
+| **refactor** | Reescrita ou reestruturação de código sem alterar o comportamento da API. | Nenhum |
+| **perf** | Refactor que melhora o desempenho. | Nenhum |
+| **style** | Mudanças que não afetam o significado (espaços, formatação, etc.). | Nenhum |
+| **test** | Adiciona testes faltantes ou corrige testes existentes. | Nenhum |
+| **docs** | Afeta apenas a documentação. | Nenhum |
+| **build** | Afeta componentes de build (ferramentas, CI, dependências, versão do projeto). | Nenhum |
+| **ops**  | Afeta componentes operacionais (infraestrutura, deployment, backup). | Nenhum |
+| **chore** | Commits miscelâneos (ex.: atualizar .gitignore). | Nenhum |
+| **ci**   | Mudanças em configuração de CI/CD. | Nenhum |
+
+Outros tipos como **improvement** podem ser adicionados, mas evite BREAKING CHANGE neles sem indicador. Seja consistente!
+
 Bem-vindo a este guia definitivo sobre **Conventional Commits**! Este documento foi criado para inspirar desenvolvedores como você a adotar padrões que transformam o histórico de commits em uma ferramenta poderosa, legível e automatizável. Baseado em pesquisas científicas e melhores práticas atualizadas até 2025, exploramos como essa convenção não só melhora a colaboração em equipes, mas também facilita a geração automática de changelogs, versionamento semântico e integração com ferramentas modernas.
 
 Imagine um repositório onde cada commit conta uma história clara, ajuda na resolução de bugs e acelera releases. Aqui, você encontrará tudo isso, estilizado para ser visualmente atraente e fácil de navegar. Vamos elevar o nível do seu Git! 🌟
 
 ## Por Que Usar Conventional Commits? Benefícios Comprovados 📈
 
-De acordo com a especificação oficial (v1.0.0, sem atualizações para v2 até 2025)<grok:render card_id="4b85db" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render>, Conventional Commits é uma convenção leve que adiciona significado humano e legível por máquinas aos mensagens de commit. Pesquisas em desenvolvimento de software destacam seus benefícios:
+De acordo com a especificação oficial (v1.0.0, sem atualizações para v2 até 2025), Conventional Commits é uma convenção leve que adiciona significado humano e legível por máquinas aos mensagens de commit. Pesquisas em desenvolvimento de software destacam seus benefícios:
 
-- **Geração Automática de Changelogs e Releases**: Ferramentas como semantic-release e conventional-changelog usam os commits para criar changelogs e bumps de versão automaticamente, alinhando com Semantic Versioning (SemVer).<grok:render card_id="84cd9c" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">35</argument>
-</grok:render> Isso reduz erros manuais e acelera o ciclo de desenvolvimento.
+- **Geração Automática de Changelogs e Releases**: Ferramentas como semantic-release e conventional-changelog usam os commits para criar changelogs e bumps de versão automaticamente, alinhando com Semantic Versioning (SemVer). Isso reduz erros manuais e acelera o ciclo de desenvolvimento.
   
-- **Melhoria na Legibilidade e Colaboração**: Commits padronizados facilitam revisões de código, rastreamento de mudanças e integração de novos membros na equipe. Estudos mostram que equipes que adotam padrões como este reduzem o tempo de onboarding em até 30%.<grok:render card_id="f42576" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">15</argument>
-</grok:render><grok:render card_id="9f2cd1" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">16</argument>
-</grok:render>
+- **Melhoria na Legibilidade e Colaboração**: Commits padronizados facilitam revisões de código, rastreamento de mudanças e integração de novos membros na equipe. Estudos mostram que equipes que adotam padrões como este reduzem o tempo de onboarding em até 30%.
 
-- **Encoraja Commits Atômicos e Disciplinados**: Força desenvolvedores a separar mudanças (ex.: features de fixes), melhorando rebases, merges e resolução de conflitos. Isso promove uma mentalidade de "one change per commit", essencial para manutenção de longo prazo.<grok:render card_id="52a86f" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">18</argument>
-</grok:render><grok:render card_id="e16d19" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">21</argument>
-</grok:render>
+- **Encoraja Commits Atômicos e Disciplinados**: Força desenvolvedores a separar mudanças (ex.: features de fixes), melhorando rebases, merges e resolução de conflitos. Isso promove uma mentalidade de "one change per commit", essencial para manutenção de longo prazo.
 
-- **Integração com Ferramentas Modernas**: Suporte a CI/CD, linting de commits e até IA para análise de histórico. Benefícios incluem versionamento automático e comunicação clara em equipes distribuídas.<grok:render card_id="fa3532" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">17</argument>
-</grok:render><grok:render card_id="afd5f7" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">19</argument>
-</grok:render>
+- **Integração com Ferramentas Modernas**: Suporte a CI/CD, linting de commits e até IA para análise de histórico. Benefícios incluem versionamento automático e comunicação clara em equipes distribuídas.
 
-- **Alinhamento com SemVer**: **feat** para MINOR, **fix** para PATCH, e **!** ou BREAKING CHANGE para MAJOR.<grok:render card_id="15d468" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render>
+- **Alinhamento com SemVer**: **feat** para MINOR, **fix** para PATCH, e **!** ou BREAKING CHANGE para MAJOR.
 
-Adote isso no início do projeto para maximizar os ganhos!<grok:render card_id="977011" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">2</argument>
-</grok:render> Equipes que implementam git hooks para enforcement veem adesão de 100%.<grok:render card_id="437370" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">29</argument>
-</grok:render>
+Adote isso no início do projeto para maximizar os ganhos! Equipes que implementam git hooks para enforcement veem adesão de 100%.
 
 ## Formato da Mensagem de Commit 🔍
 
@@ -59,35 +57,7 @@ Uma mensagem de commit convencional segue esta estrutura rigorosa:
 - **Corpo**: Explique o "por quê" da mudança, não o "como". Use imperativo.
 - **Rodapé**: Para metadados como BREAKING CHANGE ou referências a issues.
 
-**Dica Importante**: Sempre pense: "This commit will..." para guiar a redação.<grok:render card_id="dc78fd" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render>
-
-## Types (Tipos) 📋
-
-Os tipos devem ser em inglês, seguindo as melhores práticas. Aqui está uma tabela com os principais, baseados na convenção Angular e extensões comuns:<grok:render card_id="b274ec" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render><grok:render card_id="52c6ae" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">14</argument>
-</grok:render>
-
-| Type      | Descrição | Impacto no SemVer |
-|-----------|-----------|-------------------|
-| **feat** | Adiciona ou remove uma nova feature. | MINOR |
-| **fix**  | Corrige um bug. | PATCH |
-| **refactor** | Reescrita ou reestruturação de código sem alterar o comportamento da API. | Nenhum |
-| **perf** | Refactor que melhora o desempenho. | Nenhum |
-| **style** | Mudanças que não afetam o significado (espaços, formatação, etc.). | Nenhum |
-| **test** | Adiciona testes faltantes ou corrige testes existentes. | Nenhum |
-| **docs** | Afeta apenas a documentação. | Nenhum |
-| **build** | Afeta componentes de build (ferramentas, CI, dependências, versão do projeto). | Nenhum |
-| **ops**  | Afeta componentes operacionais (infraestrutura, deployment, backup). | Nenhum |
-| **chore** | Commits miscelâneos (ex.: atualizar .gitignore). | Nenhum |
-| **ci**   | Mudanças em configuração de CI/CD. | Nenhum |
-
-Outros tipos como **improvement** podem ser adicionados, mas evite BREAKING CHANGE neles sem indicador.<grok:render card_id="df2b67" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">24</argument>
-</grok:render> Seja consistente!
+**Dica Importante**: Sempre pense: "This commit will..." para guiar a redação.
 
 ## Scopes (Escopos) 🏷️
 
@@ -99,9 +69,7 @@ Outros tipos como **improvement** podem ser adicionados, mas evite BREAKING CHAN
 
 - Use **!** antes do **:** para indicar mudanças quebrantes (ex.: **feat(api)!: remove endpoint**).
 - Correlaciona com MAJOR no SemVer.
-- No rodapé, use **BREAKING CHANGE:** (maiúsculo) seguido de descrição.<grok:render card_id="f1a34c" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render>
+- No rodapé, use **BREAKING CHANGE:** (maiúsculo) seguido de descrição.
 
 ## Description (Descrição) ✍️
 
@@ -138,13 +106,7 @@ BREAKING CHANGE: ticket endpoints no longer support list all entities.`
 
 ## Git Hooks para Enforcement: Mantenha a Qualidade Automática 🛡️
 
-Para robustez, use hooks para validar mensagens. Melhores práticas incluem **commitlint** + **husky** para linting local, e scripts server-side.<grok:render card_id="eda938" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">25</argument>
-</grok:render><grok:render card_id="7a9f57" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">27</argument>
-</grok:render><grok:render card_id="27ee92" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">31</argument>
-</grok:render>
+Para robustez, use hooks para validar mensagens. Melhores práticas incluem **commitlint** + **husky** para linting local, e scripts server-side.
 
 ### Hook commit-msg (Local) com commitlint e husky
 
@@ -185,20 +147,14 @@ merge_msg_regex="^Merge branch '.+'$"
 
 Torne executável e configure no servidor.
 
-**Dica Surpreendente**: Integre com semantic-release para releases automáticos no CI/CD. Seu repositório vira uma máquina de produtividade!<grok:render card_id="836d43" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">35</argument>
-</grok:render>
+**Dica Surpreendente**: Integre com semantic-release para releases automáticos no CI/CD. Seu repositório vira uma máquina de produtividade!
 
 ## Referências e Ferramentas Adicionais 📚
 
-- [Conventional Commits Official](https://www.conventionalcommits.org/)<grok:render card_id="771dfd" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">36</argument>
-</grok:render>
+- [Conventional Commits Official](https://www.conventionalcommits.org/)
 - [Angular Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
 - [commitlint](https://commitlint.js.org/)
 - [semantic-release](https://semantic-release.gitbook.io/)
-- [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)<grok:render card_id="ed3990" card_type="citation_card" type="render_inline_citation">
-<argument name="citation_id">35</argument>
-</grok:render>
+- [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
 
 Adote, adapte e inspire! Compartilhe este guia no seu repositório e veja a comunidade crescer. Se precisar de customizações, fork e contribua. Happy committing! 🎉
