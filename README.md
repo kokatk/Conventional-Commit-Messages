@@ -1,6 +1,6 @@
-# Guia Completo de Conventional Commits: Boas Práticas para Commits Impactantes 🚀
+# Conventional Commits: Boas Práticas para Commits  🚀
 
-## Types (Tipos) 📋
+## Types 📋
 
 Os tipos devem ser em inglês, seguindo as melhores práticas. Aqui está uma tabela com os principais, baseados na convenção Angular e extensões comuns:
 
