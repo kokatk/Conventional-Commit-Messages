@@ -1,7 +1,5 @@
 # Conventional-Commit-Messages
 
-# Conventional Commits Guide
-
 This guide outlines the Conventional Commits specification, a lightweight convention for Git commit messages. It helps create an explicit commit history, making it easier to write automated tools (e.g., for generating changelogs or determining semantic version bumps). The format is inspired by the Angular commit guidelines and aligns with Semantic Versioning (SemVer).
 
 ## Commit Message Format
