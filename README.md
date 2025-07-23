@@ -149,7 +149,7 @@ Torne executável e configure no servidor.
 
 **Dica Surpreendente**: Integre com semantic-release para releases automáticos no CI/CD. Seu repositório vira uma máquina de produtividade!
 
-## Referências e Ferramentas Adicionais 📚
+# Referências e Ferramentas Adicionais 📚
 
 - [Conventional Commits Official](https://www.conventionalcommits.org/)
 - [Angular Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
